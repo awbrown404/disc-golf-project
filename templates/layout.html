@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>NC Disc Golf Project</title>
+    {% endif%}
+</head>
+
+<body>
+    <header class="site-navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/home">Home</a>
+            <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="/history">History</a>
+                        <a class="nav-item nav-link" href="/courses_map">Courses Map</a>
+                        <a class="nav-item nav-link" href="/innova">Innova Discs</a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="jumbotron big-banner" style="height:700px; padding-top: 50px;">
+            <div class=" container">
+                <h1 class="display-4 text-light">North Carolina Disc Golf Project</h1>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

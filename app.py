@@ -21,12 +21,15 @@ def home():
 
 @app.route('/history')
 def history():
-    return render_template("history.html")
+    return render_template("history.html", title = "History of NC Disc Golf")
 
-@app.route('/courses')
-def courses():
-    return render_template("courses.html")
+@app.route('/courses_map')
+def courses_map():
+    return render_template("courses_map.html", title = "Course Map")
 
-@app.route('/discs')
-def discs():
-    return render_template("discs.html")
+@app.route('/innova')
+def innova():
+    return render_template("innova.html", title = "Innova")
+
+if __name__ == "__main__":
+    app.run(debug=True)
