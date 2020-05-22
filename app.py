@@ -1,15 +1,11 @@
 # import dependencies
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 import pymongo
 
 # create connection to MongoDB 
 conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
 db = client.disc_golf_db
-
-# connect to specific collections
-courses = db.nc_courses
-discs = db.innovadiscs
 
 # develop routes
 app = Flask(__name__)
@@ -25,11 +21,13 @@ def history():
 
 @app.route('/courses_map')
 def courses_map():
-    return render_template("courses_map.html", title = "Course Map")
+    courses = list(db.nc_courses.find())
+    return render_template("courses_map.html", courses=courses, title = "Course Map")
 
 @app.route('/innova')
 def innova():
-    return render_template("innova.html", title = "Innova")
+    discs = list(db.innovadiscs.find())
+    return render_template("innova.html", discs=discs, title = "Innova")
 
 if __name__ == "__main__":
     app.run(debug=True)

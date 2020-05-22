@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
@@ -19,7 +18,7 @@
 
 <body>
     <header class="site-navigation">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="/home">Home</a>
             <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,16 +35,49 @@
             </div>
         </nav>
     </header>
-
+    {% block content %}
     <main>
         <div class="jumbotron big-banner" style="height:700px; padding-top: 50px;">
-            <div class=" container">
-                <h1 class="display-4 text-light">North Carolina Disc Golf Project</h1>
+            <div class="container">
+                <h1 class="display-4">North Carolina Disc Golf Project</h1> <br>
+                <div class="row justify-content-end">
+                    <div class="card text-center" style="width: 22rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">History</h5>
+                            <p class="card-text">Learn of the rich history of North Carolina Disc Golf!
+                            </p>
+                            <a href="/history" class="btn">History is written by the victors</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <div class="card text-center" style="width: 22rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Courses Map</h5>
+                            <p class="card-text">Find where disc golf courses are in North Carolina!
+                            </p>
+                            <a href="/courses_map" class="btn">Take me there!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <div class="card text-center" style="width: 22rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Innova Discs</h5>
+                            <p class="card-text">Check out the discs that Innova makes!
+                            </p>
+                            <a href="/innova" class="btn">I love discs!</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
     </main>
-
+    {% endblock %}
+    <footer>
+        <div class="footer">
+            Copyright awbrown404 2020
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
